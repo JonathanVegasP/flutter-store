@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_store/resources/colors.dart';
+import 'package:flutter_store/resources/images.dart';
 import 'package:flutter_store/screens/login.dart';
+import 'package:flutter_store/widgets/logo_widget.dart';
 
 class IntroScreen extends StatefulWidget {
   @override
@@ -10,32 +13,22 @@ class _IntroScreenState extends State<IntroScreen> {
   @override
   void initState() {
     super.initState();
-    initialize();
-  }
-
-  Future<void> initialize() async {
-    await Future.delayed(Duration(seconds: 3));
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => LoginScreen(),
-      ),
-    );
+    Future.delayed(Duration(seconds: 3)).then((_) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => LoginScreen(),
+        ),
+      );
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: BackgroundColor,
       body: Center(
-        child: Text(
-          "Flutter Store".toUpperCase(),
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20.0,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
+        child: LogoWidget(),
       ),
     );
   }

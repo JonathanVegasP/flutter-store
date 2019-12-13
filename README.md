@@ -1,6 +1,6 @@
 # flutter_store
 
-Flutter Store.
+A new Flutter application.
 
 ## Getting Started
 

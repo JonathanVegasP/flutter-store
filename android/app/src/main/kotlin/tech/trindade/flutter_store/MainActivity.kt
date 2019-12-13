@@ -1,4 +1,4 @@
-package com.jonathanvegasp.flutter_store
+package tech.trindade.flutter_store
 
 import android.os.Bundle
 
