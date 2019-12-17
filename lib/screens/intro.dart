@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_store/database/db.dart';
 import 'package:flutter_store/resources/colors.dart';
 import 'package:flutter_store/resources/images.dart';
 import 'package:flutter_store/screens/login.dart';
@@ -13,6 +14,7 @@ class _IntroScreenState extends State<IntroScreen> {
   @override
   void initState() {
     super.initState();
+    DB.initialize("c33367701511b4f6020ec61ded352059", "tech.jonathanvegas.flutter_store");
     Future.delayed(Duration(seconds: 3)).then((_) {
       Navigator.pushReplacement(
         context,

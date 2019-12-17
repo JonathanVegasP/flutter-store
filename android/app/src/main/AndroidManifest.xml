@@ -9,7 +9,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:icon="@mipmap/ic_launcher"
-        android:label="flutter_store">
+        android:label="Flutter Store">
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -23,7 +23,7 @@
                  defined in @style/LaunchTheme). -->
             <meta-data
                 android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
-                android:value="true" />
+                android:value="false" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

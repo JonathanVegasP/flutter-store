@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_store/blocs/login_bloc.dart';
+import 'package:flutter_store/database/db.dart';
 import 'package:flutter_store/resources/colors.dart';
 import 'package:flutter_store/widgets/logo_widget.dart';
 import 'package:flutter_store/widgets/vollup_logo.dart';
@@ -17,6 +18,15 @@ class _LoginScreenState extends State<LoginScreen> {
   void dispose() {
     _bloc.dispose();
     super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    final db = DB();
+    db.getDataByJson("users", {
+      "email": "jopxoto12@gmail.com",
+    }).then(print);
   }
 
   @override
